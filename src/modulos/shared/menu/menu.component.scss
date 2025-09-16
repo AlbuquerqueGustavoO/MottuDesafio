@@ -1,0 +1,82 @@
+.navbar {
+    padding-left: 24px;
+    padding-top: 0;
+    height: 64px;
+        @media (max-width: 640px) {
+            padding-left: 1px;
+        }   
+    img {
+        margin-top: -5px;
+    }
+
+    .btnInicio {
+        color: #a4a4a4;
+        border: 1px solid #3D3D3D;
+        border-radius: 12px 0px 0px 12px;
+        font-weight: 600;
+        width: 99px;
+        height: 40px;
+        @media (max-width: 640px) {
+            width: 91px;
+        }        
+        span {
+            padding-left: 10px;
+        @media (max-width: 640px) {
+            padding-left: 6px;
+            font-size: 14px;
+        }            
+        }         
+    }
+
+    .btnFavoritos {
+        color: #a4a4a4;
+        border: 1px solid #3D3D3D;
+        border-radius: 0px 12px 12px 0px;
+        font-weight: 600;
+        line-height: normal;
+        height: 40px;
+        @media (max-width: 640px) {
+            width: 120px;
+            padding-left: 2px;
+            padding-right: 2px;            
+        }
+        &:active {
+            background-color: #fff;
+            color: #0A0A0A;
+        }
+
+        .spanFavoritos {
+            margin-left: 10px;
+        @media (max-width: 640px) {
+            margin-left: 6px;
+            font-size: 14px;
+        }              
+        }
+
+        .contador {
+            border-radius: 50%;
+            border: 1px solid #3D3D3D;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 8px;
+            display: inline-flex;
+            /* align-items: center; */
+            justify-content: center;
+            min-width: 19px;
+            height: 19px;
+            position: relative;
+            bottom: 1px;
+        @media (max-width: 640px) {
+            margin-left: 4px;
+            padding-right: 2px;
+        min-width: 22px;
+        height: 22px; 
+        }            
+        }
+    }
+}
+
+.active {
+    background-color: #fff;
+    color: #0A0A0A !important;
+}

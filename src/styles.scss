@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Creepster';
+    src: url('/assets/fonts/Creepster-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #1F1F1F;
+    // font-family: 'Creepster', sans-serif; 
+}
+
+.container-pesquisa {
+    margin-top: 150px;
+
+    .justify-content-between {
+        img {
+            margin-left: -7px;
+        }
+
+        .col-4 {
+            position: relative;
+            align-content: center;
+            justify-items: end;
+        }
+    }
+
+    .input-wrapper {
+        position: relative;
+        width: 328px;
+
+        @media (max-width: 640px) {
+            width: 200px;
+        }
+    }
+
+    .form-ajuste {
+        width: 100%;
+        height: 49px;
+        border-radius: 15px;
+        border: 2px solid #3d3d3d;
+        background-color: transparent;
+        padding: 16px 16px 8px;
+        font-size: 16px;
+        color: #fff;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .floating-label {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #cacaca;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        background: transparent;
+        padding: 0 6px;
+        opacity: 0.9;
+    }
+
+    .form-ajuste:focus+.floating-label,
+    .form-ajuste:not(:placeholder-shown)+.floating-label {
+        top: -1px;
+        background-color: #1F1F1F;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .row-personagem {
+        margin-top: 48px;
+    }
+
+    .semResultado {
+        margin-top: 48px;
+        min-height: 511px;
+        border: 1px solid #3d3d3d;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #0A0A0A;
+        gap: 20px;
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FAFAFA;
+        }
+
+        p {
+            color: #A4A4A4;
+            font-size: 18px;
+        }
+    }
+}
+
+.active {
+    background-color: #fff;
+    color: #0A0A0A !important;
+}

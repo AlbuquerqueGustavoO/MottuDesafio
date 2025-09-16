@@ -1,0 +1,24 @@
+<div class="container container-pesquisa">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between">
+      <div class="col-2">
+        <img src="/assets/img/favoritos.svg" alt="Logo" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-personagem" *ngIf="favoritos.length > 0; else semResultado">
+    <div class="col-4 mb-3" *ngFor="let p of favoritos">
+        <app-card-personagem [personagem]="p"></app-card-personagem>
+    </div>
+  </div>
+
+  <ng-template #semResultado>
+    <div class="row semResultado">
+      <div class="col-12">
+        <h1>Nada foi encontrado</h1>
+        <p>Adicione personagens aos favoritos para vê-los aqui.</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,31 @@
+<div class="container container-pesquisa">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="col-2">
+                <img src="/assets/img/title.svg" alt="Logo" />
+            </div>
+            <div class="col-4">
+                <div class="input-wrapper">
+                    <input id="pesquisa" class="form-control form-ajuste" placeholder=" " [ngModel]="pesquisa"
+                        (ngModelChange)="onPesquisaChange($event)" />
+                    <label for="pesquisa" class="floating-label">Pesquisar</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-personagem" *ngIf="(exibidos | filtroNome:pesquisa).length > 0; else semResultado">
+        <div class="col-12 col-md-4 mb-5" *ngFor="let p of exibidos | filtroNome:pesquisa">
+            <app-card-personagem [personagem]="p"></app-card-personagem>
+        </div>
+    </div>
+
+    <ng-template #semResultado>
+        <div class="row semResultado">
+            <div class="col-12">
+                <h1>Nada foi encontrado</h1>
+                <p>Tente realizar uma nova busca.</p>
+            </div>
+        </div>
+    </ng-template>
+</div>
