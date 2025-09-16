@@ -8,16 +8,17 @@
   </div>
 
   <div class="row row-personagem" *ngIf="favoritos.length > 0; else semResultado">
-    <div class="col-4 mb-3" *ngFor="let p of favoritos">
+    <div class="col-12 col-md-4 mb-3" *ngFor="let p of favoritos">
         <app-card-personagem [personagem]="p"></app-card-personagem>
     </div>
   </div>
 
   <ng-template #semResultado>
-    <div class="row semResultado">
+    <div class="row mt-4 semResultado">
       <div class="col-12">
-        <h1>Nada foi encontrado</h1>
-        <p>Adicione personagens aos favoritos para vê-los aqui.</p>
+        <h1>Parece que você ainda não tem favoritos</h1>
+        <p class="mb-4">volte à página inicial e escolha os melhores para você.</p>
+        <a routerLink="/home">Voltar ao início</a>
       </div>
     </div>
   </ng-template>

@@ -4,7 +4,8 @@ import { Result } from 'src/model/personagem.model';
 
 @Pipe({
   name: 'filtroNome',
-  pure: true
+  pure: true,
+  standalone: true,
 })
 export class FiltroNomePipe implements PipeTransform {
   transform(personagens: Result[] | undefined, pesquisa: string): Result[] {

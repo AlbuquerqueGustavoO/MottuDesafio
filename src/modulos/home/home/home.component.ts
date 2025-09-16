@@ -1,13 +1,20 @@
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { debounceTime, Subject } from 'rxjs';
 import { Personagens, Result } from 'src/model/personagem.model';
+import { CardPersonagemComponent } from 'src/modulos/shared/card-personagem/card-personagem.component';
+import { FiltroNomePipe } from 'src/modulos/shared/pipes/pipe-filter';
 import { FavoritosService } from 'src/services/favoritos.service';
 import { PersonagemService } from 'src/services/personagens.service';
 
 @Component({
+  standalone: true,
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  imports: [NgFor, NgIf, RouterModule, CardPersonagemComponent, FormsModule, CommonModule, FiltroNomePipe],
 })
 
 export class HomeComponent implements OnInit {

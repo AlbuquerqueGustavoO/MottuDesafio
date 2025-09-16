@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Result } from 'src/model/personagem.model';
 import { FavoritosService } from 'src/services/favoritos.service';
 
 @Component({
   selector: 'app-card-personagem',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './card-personagem.component.html',
   styleUrls: ['./card-personagem.component.scss']
 })

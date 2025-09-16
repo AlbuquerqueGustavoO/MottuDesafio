@@ -1,15 +1,21 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Result } from 'src/model/personagem.model';
+import { CardPersonagemComponent } from 'src/modulos/shared/card-personagem/card-personagem.component';
 import { FavoritosService } from 'src/services/favoritos.service';
 
 @Component({
+  standalone: true,
   selector: 'app-favoritos',
   templateUrl: './favoritos.component.html',
-  styleUrls: ['./favoritos.component.scss']
+  styleUrls: ['./favoritos.component.scss'],
+  imports: [NgFor, NgIf, RouterModule, CardPersonagemComponent],
 })
+
 export class FavoritosComponent implements OnInit {
-  favoritos: Result[] = [];          
+  favoritos: Result[] = [];
   private subscription!: Subscription;
 
   constructor(private favoritosService: FavoritosService) { }
@@ -34,8 +40,4 @@ export class FavoritosComponent implements OnInit {
       this.favoritosService.addFavorito(p);
     }
   }
-
-  
-
 }
-

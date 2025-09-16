@@ -2,10 +2,16 @@
     padding-left: 24px;
     padding-top: 0;
     height: 64px;
-        @media (max-width: 640px) {
-            padding-left: 1px;
-        }   
+    background-color: #0A0A0A;
+    @media (max-width: 640px) {
+        padding-left: 1px;
+    }
+
     img {
+        margin-top: -5px;
+    }
+    
+    .d-flex{
         margin-top: -5px;
     }
 
@@ -16,16 +22,19 @@
         font-weight: 600;
         width: 99px;
         height: 40px;
+
         @media (max-width: 640px) {
             width: 91px;
-        }        
+        }
+
         span {
             padding-left: 10px;
-        @media (max-width: 640px) {
-            padding-left: 6px;
-            font-size: 14px;
-        }            
-        }         
+
+            @media (max-width: 640px) {
+                padding-left: 6px;
+                font-size: 14px;
+            }
+        }
     }
 
     .btnFavoritos {
@@ -35,11 +44,13 @@
         font-weight: 600;
         line-height: normal;
         height: 40px;
+
         @media (max-width: 640px) {
             width: 120px;
             padding-left: 2px;
-            padding-right: 2px;            
+            padding-right: 2px;
         }
+
         &:active {
             background-color: #fff;
             color: #0A0A0A;
@@ -47,10 +58,11 @@
 
         .spanFavoritos {
             margin-left: 10px;
-        @media (max-width: 640px) {
-            margin-left: 6px;
-            font-size: 14px;
-        }              
+
+            @media (max-width: 640px) {
+                margin-left: 6px;
+                font-size: 14px;
+            }
         }
 
         .contador {
@@ -62,16 +74,17 @@
             display: inline-flex;
             /* align-items: center; */
             justify-content: center;
-            min-width: 19px;
-            height: 19px;
+            min-width: 20px;
+            height: 20px;
             position: relative;
             bottom: 1px;
-        @media (max-width: 640px) {
-            margin-left: 4px;
-            padding-right: 2px;
-        min-width: 22px;
-        height: 22px; 
-        }            
+
+            @media (max-width: 640px) {
+                margin-left: 4px;
+                padding-right: 1px;
+                min-width: 21px;
+                height: 21px;
+            }
         }
     }
 }
