@@ -3,7 +3,7 @@
         <i class="bi" [ngClass]="isFavorito() ? 'bi-suit-heart-fill' : 'bi-suit-heart'"></i>
     </button>
 
-    <img [src]="personagem.image" class="card-img-top" [alt]="personagem.name">
+    <img [src]="personagem?.image" class="card-img-top" [alt]="personagem?.name">
 
     <div class="card-body">
         <h5 class="card-title">{{ personagem.name }}</h5>

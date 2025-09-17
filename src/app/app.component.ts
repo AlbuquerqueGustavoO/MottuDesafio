@@ -10,6 +10,4 @@ import { MenuComponent } from 'src/modulos/shared/menu/menu.component';
   imports: [RouterModule, MenuComponent],
 
 })
-export class AppComponent {
-  title = 'rickandmortyapi';
-}
+export class AppComponent { }
